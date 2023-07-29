@@ -1,0 +1,23 @@
+ini.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ini.c:276:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+ini.c:228:60: style: Condition '!error' is always true [knownConditionTrueFalse]
+                if (!HANDLER(user, section, name, NULL) && !error)
+                                                           ^
+ini.c:223:22: note: Assuming that condition '!error' is not redundant
+            else if (!error) {
+                     ^
+ini.c:228:60: note: Condition '!error' is always true
+                if (!HANDLER(user, section, name, NULL) && !error)
+                                                           ^
+cpp/INIReader.cpp:43:0: style: The function 'GetString' is never used. [unusedFunction]
+
+^
+tests/unittest_alloc.c:18:0: style: The function 'ini_realloc' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
